@@ -7,39 +7,39 @@
 
 @layer base {
   :root {
-    --background: 240 10% 5%;
-    --foreground: 0 0% 98%;
+    --background: 220 25% 13%;
+    --foreground: 40 30% 92%;
 
-    --card: 240 10% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 220 20% 18%;
+    --card-foreground: 40 30% 92%;
 
-    --popover: 240 10% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 20% 18%;
+    --popover-foreground: 40 30% 92%;
 
-    --primary: 25 95% 53%;
-    --primary-foreground: 240 10% 3.9%;
+    --primary: 32 85% 55%;
+    --primary-foreground: 220 25% 13%;
 
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 200 70% 45%;
+    --secondary-foreground: 220 25% 13%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 220 15% 22%;
+    --muted-foreground: 40 15% 75%;
 
-    --accent: 12 90% 55%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 70% 50%;
+    --accent-foreground: 40 30% 92%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 40 30% 92%;
 
-    --border: 240 5% 15%;
-    --input: 240 5% 15%;
-    --ring: 240 5% 65%;
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 220 15% 60%;
 
     --radius: 0.5rem;
   }
 
   * {
-    @apply border-border selection:bg-saul-purple/30 selection:text-white;
+    @apply border-border selection:bg-saul-orange/30 selection:text-white;
     scroll-behavior: smooth;
   }
   
@@ -60,21 +60,21 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-dark;
+    @apply bg-saul-dark;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-saul-orange rounded-full;
+    @apply bg-saul-gold rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-saul-gold;
+    @apply bg-saul-orange;
   }
 }
 
 @layer components {
   .glass {
-    @apply bg-gray-dark/70 backdrop-blur-xl border border-white/10 shadow-lg;
+    @apply bg-saul-dark/70 backdrop-blur-xl border border-white/10 shadow-lg;
   }
   
   .neo-glass {
@@ -98,40 +98,40 @@
   }
   
   .card-hover {
-    @apply transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 hover:shadow-saul-orange/20;
+    @apply transition-all duration-300 ease-out hover:shadow-lg hover:-translate-y-1 hover:shadow-saul-gold/20;
   }
 
   .button-primary {
-    @apply px-6 py-3 rounded font-medium bg-saul-orange text-white
-           transition-all duration-300 hover:bg-saul-red hover:shadow-md
-           focus:outline-none focus:ring-2 focus:ring-saul-red focus:ring-offset-2;
+    @apply px-6 py-3 rounded font-medium bg-saul-gold text-saul-dark
+           transition-all duration-300 hover:bg-saul-orange hover:shadow-md
+           focus:outline-none focus:ring-2 focus:ring-saul-orange focus:ring-offset-2;
   }
   
   .button-secondary {
-    @apply px-6 py-3 rounded font-medium bg-saul-purple/80 text-white
-           transition-all duration-300 hover:bg-saul-purple hover:shadow-md
-           focus:outline-none focus:ring-2 focus:ring-saul-purple focus:ring-offset-2;
+    @apply px-6 py-3 rounded font-medium bg-saul-blue text-white
+           transition-all duration-300 hover:bg-saul-teal hover:shadow-md
+           focus:outline-none focus:ring-2 focus:ring-saul-blue focus:ring-offset-2;
   }
   
   .link-hover {
     @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0
-           after:bg-saul-orange after:transition-all after:duration-300 hover:after:w-full;
+           after:bg-saul-gold after:transition-all after:duration-300 hover:after:w-full;
   }
   
   .tag {
-    @apply inline-block px-3 py-1 rounded-md text-sm font-medium bg-muted text-white border-l-2 border-saul-orange;
+    @apply inline-block px-3 py-1 rounded-md text-sm font-medium bg-muted text-white border-l-2 border-saul-gold;
   }
   
   .spotlight {
-    @apply pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-saul-purple/20 via-saul-blue/10 to-saul-red/20 opacity-0 transition-all duration-700 hover:opacity-100;
+    @apply pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-saul-blue/20 via-saul-gold/10 to-saul-red/20 opacity-0 transition-all duration-700 hover:opacity-100;
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-saul-orange via-saul-gold to-saul-red bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-saul-gold via-saul-orange to-saul-red bg-clip-text text-transparent;
   }
   
   .border-gradient {
-    @apply border-2 border-transparent bg-gradient-to-r from-saul-purple via-saul-blue to-saul-gold;
+    @apply border-2 border-transparent bg-gradient-to-r from-saul-blue via-saul-gold to-saul-red;
     mask: 
       linear-gradient(#fff 0 0) content-box, 
       linear-gradient(#fff 0 0);
@@ -144,7 +144,7 @@
   
   /* Saul themed elements */
   .saul-card {
-    @apply bg-gray-dark border-l-4 border-saul-orange rounded shadow-md p-6 transition-all hover:shadow-saul-orange/20 hover:shadow-lg;
+    @apply bg-saul-dark border-l-4 border-saul-gold rounded shadow-md p-6 transition-all hover:shadow-saul-gold/20 hover:shadow-lg;
   }
   
   .saul-heading {
@@ -152,7 +152,7 @@
   }
   
   .saul-heading::after {
-    @apply content-[''] absolute bottom-0 left-0 h-1 bg-saul-orange w-16 rounded;
+    @apply content-[''] absolute bottom-0 left-0 h-1 bg-saul-gold w-16 rounded;
   }
   
   .saul-badge {

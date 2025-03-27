@@ -60,7 +60,12 @@ export default {
 					purple: '#8B5CF6',
 					dark: '#1A1F2C',
 					orange: '#F97316',
-					green: '#10B981'
+					green: '#10B981',
+					yellow: '#FFD700',
+					tan: '#C4A484',
+					brown: '#8B4513',
+					navy: '#0A1128',
+					teal: '#20A39E'
 				},
 				gray: {
 					dark: '#1A1F2C',
