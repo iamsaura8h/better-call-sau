@@ -54,21 +54,21 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				saul: {
-					red: '#E63946',
-					gold: '#F2C14E',
-					blue: '#457B9D',
-					purple: '#8B5CF6',
-					dark: '#1A1F2C',
-					orange: '#F97316',
-					green: '#10B981',
-					yellow: '#FFD700',
-					tan: '#C4A484',
-					brown: '#8B4513',
-					navy: '#0A1128',
-					teal: '#20A39E'
+					red: '#E63946',     // Vibrant red from Better Call Saul logo
+					yellow: '#FFD700',  // Golden yellow from the logo
+					gold: '#F2C14E',    // Warmer gold tone from desert scenes
+					rust: '#C45D3B',    // Rusty brown from Albuquerque scenery
+					sand: '#E8D7B3',    // Desert sand color
+					navy: '#1D3557',    // Dark navy from Saul's suits
+					blue: '#457B9D',    // Medium blue tone
+					charcoal: '#2C3333', // Dark charcoal for text
+					desert: '#DEB887',   // Desert backdrop color
+					tan: '#D2B48C',      // Tan from desert landscapes
+					coffee: '#6F4E37',   // Coffee brown for accents
+					cream: '#F5F5DC'     // Light cream background
 				},
 				gray: {
-					dark: '#1A1F2C',
+					dark: '#2C3333',
 					DEFAULT: '#8E9196',
 					light: '#F8F9FA'
 				}

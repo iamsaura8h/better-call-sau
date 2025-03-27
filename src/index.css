@@ -7,45 +7,47 @@
 
 @layer base {
   :root {
-    --background: 220 25% 13%;
-    --foreground: 40 30% 92%;
+    --background: 43 39% 93%;  /* Light desert sand color */
+    --foreground: 198 32% 27%; /* Darker blue for text */
 
-    --card: 220 20% 18%;
-    --card-foreground: 40 30% 92%;
+    --card: 43 39% 98%;
+    --card-foreground: 198 32% 27%;
 
-    --popover: 220 20% 18%;
-    --popover-foreground: 40 30% 92%;
+    --popover: 43 39% 98%;
+    --popover-foreground: 198 32% 27%;
 
-    --primary: 32 85% 55%;
-    --primary-foreground: 220 25% 13%;
+    --primary: 47 89% 51%;    /* Gold color */
+    --primary-foreground: 198 32% 27%;
 
-    --secondary: 200 70% 45%;
-    --secondary-foreground: 220 25% 13%;
+    --secondary: 355 78% 56%; /* Red accent */
+    --secondary-foreground: 43 39% 98%;
 
-    --muted: 220 15% 22%;
-    --muted-foreground: 40 15% 75%;
+    --muted: 43 20% 87%;
+    --muted-foreground: 198 20% 40%;
 
-    --accent: 0 70% 50%;
-    --accent-foreground: 40 30% 92%;
+    --accent: 355 78% 56%;    /* Red accent */
+    --accent-foreground: 43 39% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 30% 92%;
+    --destructive-foreground: 43 39% 98%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
-    --ring: 220 15% 60%;
+    --border: 43 20% 87%;
+    --input: 43 20% 87%;
+    --ring: 198 32% 27%;
 
     --radius: 0.5rem;
   }
 
   * {
-    @apply border-border selection:bg-saul-orange/30 selection:text-white;
+    @apply border-border selection:bg-saul-red/30 selection:text-saul-navy;
     scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-saul-cream text-saul-charcoal antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d2b48c' fill-opacity='0.1'%3E%3Cpath d='M36 34v6h6v-6h-6zm0 0v6h6v-6h-6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
   }
 
   /* Safari smooth scrolling fix */
@@ -60,7 +62,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-saul-dark;
+    @apply bg-saul-sand;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -68,17 +70,17 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-saul-orange;
+    @apply bg-saul-red;
   }
 }
 
 @layer components {
   .glass {
-    @apply bg-saul-dark/70 backdrop-blur-xl border border-white/10 shadow-lg;
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-lg;
   }
   
   .neo-glass {
-    @apply bg-black/30 backdrop-blur-sm border border-white/5 shadow-md;
+    @apply bg-white/60 backdrop-blur-sm border border-white/20 shadow-md;
   }
   
   .text-balance {
@@ -90,11 +92,11 @@
   }
   
   .section-title {
-    @apply text-4xl md:text-5xl font-display font-bold mb-8 text-white;
+    @apply text-4xl md:text-5xl font-display font-bold mb-8 text-saul-navy;
   }
   
   .section-subtitle {
-    @apply text-lg md:text-xl font-medium mb-12 text-gray max-w-2xl;
+    @apply text-lg md:text-xl font-medium mb-12 text-saul-blue max-w-2xl;
   }
   
   .card-hover {
@@ -102,24 +104,24 @@
   }
 
   .button-primary {
-    @apply px-6 py-3 rounded font-medium bg-saul-gold text-saul-dark
-           transition-all duration-300 hover:bg-saul-orange hover:shadow-md
-           focus:outline-none focus:ring-2 focus:ring-saul-orange focus:ring-offset-2;
+    @apply px-6 py-3 rounded font-medium bg-saul-yellow text-saul-navy
+           transition-all duration-300 hover:bg-saul-red hover:text-white hover:shadow-md
+           focus:outline-none focus:ring-2 focus:ring-saul-red focus:ring-offset-2;
   }
   
   .button-secondary {
     @apply px-6 py-3 rounded font-medium bg-saul-blue text-white
-           transition-all duration-300 hover:bg-saul-teal hover:shadow-md
+           transition-all duration-300 hover:bg-saul-navy hover:shadow-md
            focus:outline-none focus:ring-2 focus:ring-saul-blue focus:ring-offset-2;
   }
   
   .link-hover {
     @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0
-           after:bg-saul-gold after:transition-all after:duration-300 hover:after:w-full;
+           after:bg-saul-red after:transition-all after:duration-300 hover:after:w-full;
   }
   
   .tag {
-    @apply inline-block px-3 py-1 rounded-md text-sm font-medium bg-muted text-white border-l-2 border-saul-gold;
+    @apply inline-block px-3 py-1 rounded-md text-sm font-medium bg-saul-sand text-saul-charcoal border-l-2 border-saul-gold;
   }
   
   .spotlight {
@@ -127,7 +129,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-saul-gold via-saul-orange to-saul-red bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-saul-gold via-saul-red to-saul-coffee bg-clip-text text-transparent;
   }
   
   .border-gradient {
@@ -144,19 +146,19 @@
   
   /* Saul themed elements */
   .saul-card {
-    @apply bg-saul-dark border-l-4 border-saul-gold rounded shadow-md p-6 transition-all hover:shadow-saul-gold/20 hover:shadow-lg;
+    @apply bg-white/80 backdrop-blur-md border-l-4 border-saul-yellow rounded shadow-md p-6 transition-all hover:shadow-saul-gold/20 hover:shadow-lg;
   }
   
   .saul-heading {
-    @apply text-white font-display font-bold relative;
+    @apply text-saul-navy font-display font-bold relative;
   }
   
   .saul-heading::after {
-    @apply content-[''] absolute bottom-0 left-0 h-1 bg-saul-gold w-16 rounded;
+    @apply content-[''] absolute bottom-0 left-0 h-1 bg-saul-yellow w-16 rounded;
   }
   
   .saul-badge {
-    @apply bg-saul-blue/30 text-white px-3 py-1 rounded-md text-sm font-medium border-l-2 border-saul-blue;
+    @apply bg-saul-yellow/30 text-saul-navy px-3 py-1 rounded-md text-sm font-medium border-l-2 border-saul-red;
   }
   
   /* Animation delay utilities */
