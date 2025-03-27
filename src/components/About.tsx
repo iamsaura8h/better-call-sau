@@ -1,72 +1,111 @@
 
 import React from 'react';
+import { Code, PenTool, Server, Database, Wrench, Lightbulb } from 'lucide-react';
 
 const About: React.FC = () => {
   const skills = [
     {
       category: 'Languages',
+      icon: <Code className="text-saul-orange" size={24} />,
       items: ['JavaScript', 'TypeScript', 'Java', 'Python'],
     },
     {
       category: 'Frontend',
+      icon: <PenTool className="text-saul-gold" size={24} />,
       items: ['React.js', 'Next.js', 'Redux', 'TailwindCSS'],
     },
     {
       category: 'Backend',
+      icon: <Server className="text-saul-blue" size={24} />,
       items: ['Node.js', 'Express.js', 'RESTful APIs', 'GraphQL'],
     },
     {
       category: 'Databases',
+      icon: <Database className="text-saul-purple" size={24} />,
       items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Supabase'],
     },
     {
       category: 'Tools',
+      icon: <Wrench className="text-saul-red" size={24} />,
       items: ['Git', 'Docker', 'VS Code', 'Postman', 'Linux'],
     },
     {
       category: 'Concepts',
+      icon: <Lightbulb className="text-saul-green" size={24} />,
       items: ['UI/UX Design', 'Performance Optimization', 'CRUD Operations', 'API Integration'],
     },
   ];
 
   return (
-    <section id="about" className="section-container">
+    <section id="about" className="section-container relative">
+      {/* Background elements */}
+      <div className="absolute top-0 right-0 w-72 h-72 bg-saul-orange/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-saul-purple/5 rounded-full blur-3xl -z-10"></div>
+      
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row gap-16">
           <div className="md:w-1/2">
-            <h2 className="section-title opacity-0 animate-slide-up">About Me</h2>
+            <div className="mb-8 relative">
+              <h2 className="section-title opacity-0 animate-slide-up saul-heading">About Me</h2>
+            </div>
+            
             <div className="space-y-6 opacity-0 animate-slide-up delay-100">
-              <p className="text-lg text-charcoal-dark leading-relaxed">
-                I'm a full-stack developer with a passion for building elegant, user-centered digital experiences. My approach combines technical expertise with creative problem-solving to deliver applications that are not only functional but also intuitive and engaging.
-              </p>
-              <p className="text-lg text-charcoal-dark leading-relaxed">
-                With experience in the MERN stack, Next.js, and UI/UX design, I specialize in creating scalable applications, developing robust APIs, and optimizing user experiences. I'm constantly exploring new technologies and methodologies to enhance my skill set and stay at the forefront of web development.
-              </p>
-              <p className="text-lg text-charcoal-dark leading-relaxed">
-                As a Java Lead at CodeHoppers Club, I've had the opportunity to mentor students and share my knowledge through workshops and coding sessions. This experience has not only strengthened my technical abilities but also my communication and leadership skills.
-              </p>
-              <p className="text-lg text-charcoal-dark leading-relaxed">
-                I'm particularly passionate about open source contribution and exploring the intersection of AI/ML with web development to create innovative solutions.
-              </p>
+              <div className="relative overflow-hidden saul-card">
+                <p className="text-lg text-gray-light leading-relaxed">
+                  I'm not just another developer. I'm the developer you <span className="text-saul-orange font-semibold">call</span> when you need results. My expertise in full-stack development means I can handle everything from elegant frontends to robust backends.
+                </p>
+                <div className="absolute -right-10 -bottom-10 w-24 h-24 bg-saul-orange/20 rounded-full blur-2xl"></div>
+              </div>
+              
+              <div className="saul-card">
+                <p className="text-lg text-gray-light leading-relaxed">
+                  With experience in the MERN stack, Next.js, and UI/UX design, I create applications that don't just work—they <span className="text-saul-orange font-semibold">impress</span>. My solutions are scalable, responsive, and built with the future in mind.
+                </p>
+              </div>
+              
+              <div className="saul-card">
+                <p className="text-lg text-gray-light leading-relaxed">
+                  As a Java Lead at CodeHoppers Club, I've mentored hundreds of students, transforming complex concepts into accessible knowledge. This experience has sharpened both my technical skills and my ability to <span className="text-saul-orange font-semibold">communicate effectively</span>.
+                </p>
+              </div>
+              
+              <div className="saul-card">
+                <p className="text-lg text-gray-light leading-relaxed">
+                  When it comes to problem-solving, I don't just fix issues—I <span className="text-saul-orange font-semibold">prevent</span> them. My passion for open source and exploring AI/ML integration keeps me at the cutting edge of development trends.
+                </p>
+              </div>
             </div>
           </div>
+          
           <div className="md:w-1/2">
-            <h2 className="section-title opacity-0 animate-slide-up delay-200">Skills</h2>
+            <div className="mb-8 relative">
+              <h2 className="section-title opacity-0 animate-slide-up delay-200 saul-heading">Skills</h2>
+            </div>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {skills.map((skillGroup, index) => (
                 <div 
                   key={skillGroup.category} 
-                  className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/50 opacity-0 animate-slide-up"
-                  style={{ animationDelay: `${300 + index * 100}ms` }}
+                  className="bg-gray-dark rounded-lg p-6 border-l-4 border-saul-orange shadow-lg opacity-0 animate-slide-up relative overflow-hidden group card-hover"
+                  style={{ animationDelay: `${300 + index * 100}ms`, borderColor: index % 6 === 0 ? '#E63946' : index % 6 === 1 ? '#F2C14E' : index % 6 === 2 ? '#457B9D' : index % 6 === 3 ? '#8B5CF6' : index % 6 === 4 ? '#F97316' : '#10B981' }}
                 >
-                  <h3 className="text-xl font-semibold mb-3 text-charcoal-dark">
-                    {skillGroup.category}
-                  </h3>
+                  <div className="absolute -right-10 -bottom-10 w-32 h-32 bg-gradient-radial from-white/5 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  
+                  <div className="flex items-center mb-4">
+                    <div className="mr-3">
+                      {skillGroup.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">
+                      {skillGroup.category}
+                    </h3>
+                  </div>
+                  
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill) => (
                       <span 
                         key={skill} 
                         className="tag"
+                        style={{ borderColor: index % 6 === 0 ? '#E63946' : index % 6 === 1 ? '#F2C14E' : index % 6 === 2 ? '#457B9D' : index % 6 === 3 ? '#8B5CF6' : index % 6 === 4 ? '#F97316' : '#10B981' }}
                       >
                         {skill}
                       </span>

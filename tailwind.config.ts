@@ -53,25 +53,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sage: {
-					light: '#D1D9CC',
-					DEFAULT: '#A3B18A',
-					dark: '#588157'
+				saul: {
+					red: '#E63946',
+					gold: '#F2C14E',
+					blue: '#457B9D',
+					purple: '#8B5CF6',
+					dark: '#1A1F2C',
+					orange: '#F97316',
+					green: '#10B981'
 				},
-				stone: {
-					light: '#F5F5F5',
-					DEFAULT: '#E5E5E5',
-					dark: '#D4D4D4'
-				},
-				charcoal: {
-					light: '#4D4D4D',
-					DEFAULT: '#333333',
-					dark: '#1A1A1A'
-				},
-				gold: {
-					light: '#FFD700',
-					DEFAULT: '#D4AF37',
-					dark: '#996515'
+				gray: {
+					dark: '#1A1F2C',
+					DEFAULT: '#8E9196',
+					light: '#F8F9FA'
 				}
 			},
 			borderRadius: {
@@ -81,7 +75,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['SF Pro Display', 'Inter', 'sans-serif'],
+				display: ['Space Grotesk', 'sans-serif'],
 				mono: ['SF Mono', 'monospace']
 			},
 			keyframes: {
@@ -120,6 +114,28 @@ export default {
 				pulse: {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.5' },
+				},
+				spotlight: {
+					"0%": {
+						opacity: "0",
+						transform: "translate(-72%, -62%) scale(0.5)",
+					},
+					"100%": {
+						opacity: "1",
+						transform: "translate(-50%,-40%) scale(1)",
+					},
+				},
+				shimmer: {
+					from: { backgroundPosition: "0 0" },
+					to: { backgroundPosition: "-200% 0" },
+				},
+				neon: {
+					'0%, 100%': { textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff, 0 0 30px #0ff, 0 0 35px #0ff' },
+					'50%': { textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff' }
+				},
+				marquee: {
+					'0%': { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(-100%)' }
 				}
 			},
 			animation: {
@@ -132,6 +148,10 @@ export default {
 				'slide-right': 'slideRight 0.6s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
 				'pulse': 'pulse 3s ease-in-out infinite',
+				'spotlight': "spotlight 2s ease .75s 1 forwards",
+				'shimmer': "shimmer 2s linear infinite",
+				'neon': 'neon 1.5s ease-in-out infinite',
+				'marquee': 'marquee 25s linear infinite'
 			}
 		},
 	},
