@@ -47,7 +47,7 @@ const Header: React.FC = () => {
               className="font-display font-bold text-xl md:text-2xl relative group"
               aria-label="Saurabh Kumar"
             >
-              <span className="text-white">Saurabh</span>
+              <span className="text-saul-navy">Saurabh</span>
               <span className="text-saul-orange">K</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-saul-orange transition-all group-hover:w-full"></span>
             </a>
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
                     <li key={link.name}>
                       <a
                         href={link.href}
-                        className="text-white hover:text-saul-orange transition-colors duration-200 font-medium relative group"
+                        className="text-black hover:text-saul-orange transition-colors duration-200 font-medium relative group"
                       >
                         {link.name}
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-saul-orange transition-all group-hover:w-full"></span>
@@ -142,12 +142,12 @@ const Header: React.FC = () => {
           {/* Spotlight animation */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none w-[500px] h-[500px] rounded-full bg-gradient-to-r from-saul-purple/20 via-saul-blue/5 to-saul-red/20 blur-3xl animate-spotlight"></div>
           
-          <div className="mb-4 inline-block px-4 py-1 rounded-full bg-saul-orange/20 text-white text-sm font-medium border border-saul-orange/30 backdrop-blur-sm animate-slide-down">
+          <div className="mb-4 inline-block px-4 py-1 rounded-full bg-saul-orange/20 text-black text-sm font-medium border border-saul-orange/30 backdrop-blur-sm animate-slide-down">
             <span className="mr-2">⚖️</span>Full-Stack Developer | Problem Solver | Java Lead
           </div>
           
           <div className="mb-8 overflow-hidden">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white animate-slide-up relative inline-block">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-black animate-slide-up relative inline-block">
               <span className="relative">
                 <span className="block animate-slide-up">Better Call</span>
                 <span className="block mt-2 text-gradient animate-slide-up delay-200">Saurabh</span>
