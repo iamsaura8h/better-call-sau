@@ -81,7 +81,9 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Space Grotesk', 'sans-serif'],
-				mono: ['SF Mono', 'monospace']
+				mono: ['SF Mono', 'monospace'],
+				dancing: ["Dancing Script",'sans-serif'],
+				winky: ['Winky Sans', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {

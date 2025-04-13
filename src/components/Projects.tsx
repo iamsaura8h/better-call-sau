@@ -23,7 +23,7 @@ const Projects: React.FC = () => {
       demoUrl: 'https://nutrisync-ai.vercel.app/',
       repoUrl: 'https://github.com/iamsaura8h/NutriSync',
       achievement: '90% faster, eliminating guesswork in fitness tracking',
-      image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80'
+      image: 'images/nutrisync.png'
     },
     {
       title: 'Student75',
@@ -31,8 +31,8 @@ const Projects: React.FC = () => {
       tech: ['React.js', 'TypeScript', 'TailwindCSS'],
       demoUrl: 'https://student75-pro.vercel.app/',
       repoUrl: 'https://github.com/iamsaura8h/Student75Pro',
-      achievement: 'Enhanced efficiency by 50%',
-      image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=800&q=80'
+      achievement: 'Enhanced productivity by 50%',
+      image:"/images/student75.png"
     }
   ];
 
@@ -72,9 +72,9 @@ const Projects: React.FC = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-dark to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-dark via-transaparent to-transparent"></div>
                 <div className="absolute bottom-4 left-6 right-6">
                   <h3 className="text-3xl font-display font-bold text-white">
                     {project.title}
@@ -116,7 +116,7 @@ const Projects: React.FC = () => {
         
         <div className="mt-16 text-center opacity-0 animate-slide-up delay-400">
           <a 
-            href="https://github.com/iamsaura8h" 
+            href="https://github.com/iamsaura8h?tab=repositories" 
             target="_blank" 
             rel="noopener noreferrer"
             className="button-secondary inline-flex items-center"

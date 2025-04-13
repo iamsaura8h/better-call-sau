@@ -149,8 +149,8 @@ const Header: React.FC = () => {
           <div className="mb-8 overflow-hidden">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-black animate-slide-up relative inline-block">
               <span className="relative">
-                <span className="block animate-slide-up">Better Call</span>
-                <span className="block mt-2 text-gradient animate-slide-up delay-200">Saurabh</span>
+                <span className="block animate-slide-up font-medium">Better Call</span>
+                <span className="block font-dancing font-black text-gradient animate-slide-up delay-200">Saurabh</span>
                 <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-saul-orange via-saul-gold to-saul-red animate-slide-up delay-300"></span>
               </span>
             </h1>
@@ -171,13 +171,13 @@ const Header: React.FC = () => {
             </a>
           </div>
           
-          <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          {/* <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
             <a href="#about" aria-label="Scroll down">
               <div className="w-8 h-12 border-2 border-saul-orange rounded-full flex justify-center">
                 <div className="w-1 h-3 bg-saul-orange rounded-full mt-2 animate-pulse"></div>
               </div>
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
